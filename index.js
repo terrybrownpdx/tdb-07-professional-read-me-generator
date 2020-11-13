@@ -53,22 +53,26 @@ function init() {
             message: 'Email address?',
         },
     ]).then((response) => {
-        console.log(response);
         // function to write README file
-        fs.writeFile('README.MD', JSON.stringify(response), (err) =>
+        fs.writeFile('README.md', generateMarkdown(response), (err) =>
             err ? console.log(err) : console.log('Success!'))
     });
-    }
-    generateMarkdown();
+    //generateMarkdown();
+}
+// function call to initialize program
+init();
 
-    // function to initialize program
-    // function init() {
-    // inquirer.prompt().then((response) => {
-    //     console.log(response);
-    //     // function to write README file
-    //     fs.writeFile('README.MD', JSON.stringify(response), (err) =>
-    //         err ? console.log(err) : console.log('Success!'))
-    // });
 
-    // function call to initialize program
-    init();
+
+
+
+
+// function to initialize program
+// function init() {
+// inquirer.prompt().then((response) => {
+//     console.log(response);
+//     // function to write README file
+//     fs.writeFile('README.MD', JSON.stringify(response), (err) =>
+//         err ? console.log(err) : console.log('Success!'))
+// });
+
