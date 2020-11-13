@@ -3,7 +3,7 @@
     1
 
     # Table of Contents
-    -[description](#description)
+    [description](doc:description)
     -[installation](#installation)
     -[usage](#usage)
     -[licenses](#licenses)

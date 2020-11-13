@@ -4,21 +4,15 @@ function generateMarkdown(response) {
     ##Title:
     ${response.title}
 
-    # Table of Contents
-    -[description](#description)
-    -[installation](#installation)
-    -[usage](#usage)
-    -[licenses](#licenses)
-    -[contribution](#contribution)
-    -[test](#test)
-    -[username](#username)
-    -[email](#email)
-    
-    ##Username:
-    ${response.username}
-    
     ##Description:
     ${response.description}
+
+    # Table of Contents
+    -[Installation](#installation)
+    -[Usage](#usage)
+    -[Licenses](#licenses)
+    -[Contributing](#contribution)
+    -[Tests](#test)    
     
     ##Installation:
     ${response.installation}
@@ -29,13 +23,13 @@ function generateMarkdown(response) {
     ##Licenses:
     ${response.licenses}
     
-    ##Contribution:
+    ##Contributing:
     ${response.contribution}
     
-    #Test:
+    #Tests:
     ${response.test}
 
-    ##Contact
+    ##Questions
     To view the code for this project visit the github profile below.
     Github Profile: [${response.username}] (${response.username})
     For any questions contact us via email.
