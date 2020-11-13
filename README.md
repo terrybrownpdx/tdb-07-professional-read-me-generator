@@ -1,1 +1,1 @@
-# tdb-07-professional-read-me-generator
+{"title":"we","description":"we","installation":"we","usage":"we","contribution":"we","test":"we","licenses":"license1","username":"we","email":"we"}

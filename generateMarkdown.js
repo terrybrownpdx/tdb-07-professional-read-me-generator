@@ -1,22 +1,44 @@
-// const answers = [
-// `##Title ${response.title} 
-// ##Description ${response.decription}
-// ##table of contents
-// ##Installation ${response.installation }
-// ##Usage ${response.usage }
-// ##License ${ response.license }
-// ##Contributing ${ response.contribution } 
-// ##Tests ${ response.test } 
-// ##Questions ${response.username }.${ response.email }`
-// ]
-// // function to generate markdown for README
-// function generateMarkdown(response) {
-//     return `# ${response.title}`
-    
+// function to generate markdown for README
+function generateMarkdown(response) {
+    return `
+    # ${response.title}
+    # Table of Contents
+    -[description](#description)
+    -[installation](#installation)
+    -[usage](#usage)
+    -[licenses](#licenses)
+    -[contribution](#contribution)
+    -[test](#test)
+    -[username](#username)
+    -[email](#email)
 
-    
+    ${response.username}
+    ##username:
 
-        
-// }
+    ${response.description}
+    ##description:
 
-// module.exports = generateMarkdown;
+    ${response.installation}
+    ##installation:
+
+    ${response.usage}
+    ##usage:
+
+    ${response.licenses}
+    ##licenses:
+
+    ${response.contribution}
+    ##contribution:
+
+    ${response.test}
+    ##test:
+
+    ${response.username}
+    ##username:
+
+    ${response.email}
+    ##email:
+    `;
+}
+
+module.exports = generateMarkdown;

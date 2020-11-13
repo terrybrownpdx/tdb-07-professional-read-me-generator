@@ -1,10 +1,11 @@
-const inquirer = require('inquirer');
 const fs = require('fs');
-//const generateMarkdown = require('generateMarkdown.js');
+const inquirer = require('inquirer');
+const axios = require('axios');
+const generateMarkdown = require('./generateMarkdown');
 
-// array of questions for user
-inquirer
-    .prompt([
+function init() {
+    // array of questions for user
+    inquirer.prompt([
         {
             type: 'input',
             name: 'title',
@@ -17,7 +18,7 @@ inquirer
         },
         {
             type: 'input',
-            name: 'installation instructions',
+            name: 'installation',
             message: 'Installation instructions?',
         },
         {
@@ -27,17 +28,17 @@ inquirer
         },
         {
             type: 'input',
-            name: 'contribution guidelines',
+            name: 'contribution',
             message: 'Contribution guidelines?',
         },
         {
             type: 'input',
-            name: 'test instructions',
+            name: 'test',
             message: 'Test instructions?',
         },
         {
             type: 'list',
-            name: 'license',
+            name: 'licenses',
             message: 'Test instructions?',
             choices: ['license1', 'license2', 'license3'],
         },
@@ -48,22 +49,26 @@ inquirer
         },
         {
             type: 'email',
-            name: 'email address',
+            name: 'email',
             message: 'Email address?',
         },
-    ]).then((response) => {   
-        console.log(response);    
+    ]).then((response) => {
+        console.log(response);
+        // function to write README file
+        fs.writeFile('README.MD', JSON.stringify(response), (err) =>
+            err ? console.log(err) : console.log('Success!'))
     });
-    
-    // function to write README file
-    //...
-    //);
-             
+    }
+    generateMarkdown();
 
-    //     // function to initialize program
-    //     function init(questions) {
+    // function to initialize program
+    // function init() {
+    // inquirer.prompt().then((response) => {
+    //     console.log(response);
+    //     // function to write README file
+    //     fs.writeFile('README.MD', JSON.stringify(response), (err) =>
+    //         err ? console.log(err) : console.log('Success!'))
+    // });
 
-    //     }
-
-    //     // function call to initialize program
-    //     init(questions);
+    // function call to initialize program
+    init();
