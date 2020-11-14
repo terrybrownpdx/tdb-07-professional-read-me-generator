@@ -8,11 +8,11 @@ function generateMarkdown(response) {
     ${response.description}
 
     # Table of Contents
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Licenses](#licenses)
-    -[Contributing](#contribution)
-    -[Tests](#test)    
+    ![Installation](#installation)
+    ![Usage](#usage)
+    ![Licenses](#licenses)
+    ![Contributing](#contribution)
+    ![Tests](#test)    
     
     ##Installation:
     ${response.installation}
@@ -22,6 +22,9 @@ function generateMarkdown(response) {
     
     ##Licenses:
     ${response.licenses}
+
+    ##Badge
+    ${response.badge}
     
     ##Contributing:
     ${response.contribution}

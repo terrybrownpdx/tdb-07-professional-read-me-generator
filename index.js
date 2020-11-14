@@ -39,8 +39,13 @@ function init() {
         {
             type: 'list',
             name: 'licenses',
-            message: 'Test instructions?',
-            choices: ['license1', 'license2', 'license3'],
+            message: 'Choose a license.',
+            choices: ['MIT', 'lApache', 'ISC'],
+        },
+        {
+            type: 'input',
+            name: 'badge',
+            message: 'Input your badge URL.  For more info, go to https://shield.io/',
         },
         {
             type: 'username',
