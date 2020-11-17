@@ -1,16 +1,16 @@
 
     ##Title:
-    project 7
+    test
 
     ##Description:
-    example
+    test
 
     # Table of Contents
-    ![Installation](#installation)
-    ![Usage](#usage)
-    ![Licenses](#licenses)
-    ![Contributing](#contribution)
-    ![Tests](#test)    
+    [Installation](#Installation)
+    [Usage](#Usage)
+    [Licenses](#Licenses)
+    [Contributing](#Contribution)
+    [Tests](#Test)    
     
     ##Installation:
     test
@@ -19,7 +19,7 @@
     test
     
     ##Licenses:
-    MIT
+    lApache
 
     ##Badge
     test
